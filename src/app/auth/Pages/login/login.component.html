@@ -1,0 +1,41 @@
+<body class="area">
+    <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <br><br>
+  <mat-card>
+    <mat-card-content>
+      <form class="form-cont" [formGroup]="loginForm" (ngSubmit)="login()">
+        <img class="img" src="../../../../assets/logo.png" alt="logo">
+        <br>
+        <h1>Iniciar Sesión</h1>
+        <br>
+        <div class="cont-input">
+          <mat-form-field>
+            <input matInput placeholder="Email" type="email"  name="email" aria-describedby="emailHelp" required formControlName="email" />
+          </mat-form-field>
+          <br>
+          <mat-form-field>
+            <input matInput type="password" name="password" minlength="8"  required  id="inpPassword"  placeholder="Password" required  formControlName="password" />
+          </mat-form-field>
+        </div>
+        <br>
+        <button mat-raised-button color="primary" type="submit" >Login</button>
+      </form>
+      <ngx-spinner type="ball-scale-multiple"></ngx-spinner>
+      <br>
+      <a routerLink="/auth/register" ss="login" >¿No tienes cuenta? Crea una aquí</a>
+      <br><br>
+    </mat-card-content>
+  </mat-card>
+
+</body>
